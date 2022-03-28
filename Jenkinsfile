@@ -10,12 +10,11 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        name = "us.gcr.io:keen-goods-345119:test5"
         app = docker.build("us.gcr.io/keen-goods-345119/test5")
     }
     stage('Push Image') {
         docker.withRegistry('https://us.gcr.io', 'gcr:keen-goods-345119') {
-        APP = "1.4.8"
+        APP = "1.5.0"
         app.push("${APP}")
         //app.push("latest")
         }
