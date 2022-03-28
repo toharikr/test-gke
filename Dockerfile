@@ -1,6 +1,6 @@
 FROM nginx
 
-CHMOD +777 wrapper.sh
+sudo chmod g+rwx wrapper.sh
 
 COPY wrapper.sh /
 
