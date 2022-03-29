@@ -14,7 +14,7 @@ node {
     }
     stage('Push Image') {
         docker.withRegistry('https://us.gcr.io', 'gcr:keen-goods-345119') {
-        APP = "1.5.1"
+        APP = "1.5.2"
         app.push("${APP}")
         //app.push("latest")
         }
