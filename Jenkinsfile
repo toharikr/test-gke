@@ -16,7 +16,7 @@ node {
         docker.withRegistry('https://us.gcr.io', 'gcr:keen-goods-345119') {
         //APP = "1.5.20"
         //app.push("${APP}")
-        app.push("1.25")
+        app.push("1.26")
         }
 }
 
