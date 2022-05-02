@@ -65,7 +65,7 @@ jobs:
       with:
         registry: gcr.io
         username: _json_key
-        password: ${{ secrets.GCP_CREDENTIALS }}
+        password: ${{ secrets.GKE_TEST }}
     
     - name: Set up GKE credentials
       uses: google-github-actions/get-gke-credentials@v0
