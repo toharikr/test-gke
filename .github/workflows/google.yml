@@ -65,7 +65,7 @@ jobs:
       with:
         registry: gcr.io
         username: _json_key
-        password: tonal-justice-348701-83d765539256.json
+        password: ${{ secrets.GCP_CREDENTIALS }}
     
     - name: Set up GKE credentials
       uses: google-github-actions/get-gke-credentials@v0
