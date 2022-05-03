@@ -12,6 +12,7 @@ node {
          * docker build on the command line */
         app = docker.build("us.gcr.io/keen-goods-345119/test5")
     }
+    
     stage('Push Image') {
         docker.withRegistry('https://us.gcr.io', 'gcr:keen-goods-345119') {
         //APP = "1.5.20"
