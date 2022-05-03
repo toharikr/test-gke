@@ -1,4 +1,4 @@
 images:
 - name: the-my-app
-  newName: us-east4-docker.pkg.dev/tonal-justice-348701/docker-repo
+  newName: gcr.io/tonal-justice-348701/static-site@sha256:1bea8f9c53cc53f3172168f914050738d6eb6f4d2431ea0ab6b0c170d47e12d3
   newTag: test
