@@ -12,7 +12,7 @@ env:
   GKE_PROJECT: tonal-justice-348701
   GKE_EMAIL: ${{ secrets.GKE_EMAIL }}
   GITHUB_SHA: ${{ github.sha }}
-  GKE_ZONE: us-east1-b
+  GKE_ZONE: us-central1-c
   GKE_CLUSTER: cluster-2
   IMAGE: randocats
   REGISTRY_HOSTNAME: us.gcr.io
