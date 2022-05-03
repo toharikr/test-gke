@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: gcr.io/$PROJECT_ID/static-site@sha256:$GITHUB_SHA
+          image: gcr.io/tonal-justice-348701/static-site@sha256:284a4ae68baeca7d826c9e5dab4d1e85fade3049417d6d9a963bc27395d34d15
           ports:
           - containerPort: 80
