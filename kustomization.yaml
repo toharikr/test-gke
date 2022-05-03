@@ -1,3 +1,8 @@
 resources:
 - deployment.yaml
 namePrefix: bar-
+
+images:
+- name: the-my-app
+  newName: my.docker.registry.com/my-project/my-app
+  newTag: test
