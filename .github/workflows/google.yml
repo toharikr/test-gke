@@ -16,7 +16,7 @@ env:
   GKE_CLUSTER: cluster-2    # Add your cluster name here.
   GKE_ZONE: us-central1-c   # Add your cluster zone here.
   DEPLOYMENT_NAME: nginx    #gke-test # Add your deployment name here.
-  IMAGE: static-site
+  IMAGE: static-site@sha256
 
 jobs:
   setup-build-publish-deploy:
