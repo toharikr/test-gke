@@ -15,7 +15,7 @@ env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: cluster-2    # Add your cluster name here.
   GKE_ZONE: us-central1-c   # Add your cluster zone here.
-  DEPLOYMENT_NAME: nginx    # gke-test # Add your deployment name here.
+  DEPLOYMENT_NAME: gke-test # Add your deployment name here.
   IMAGE: static-site
 
 jobs:
@@ -63,6 +63,7 @@ jobs:
     # Set up kustomize
     - name: Set up Kustomize
       run: |-
+       ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
         curl -sfLo kustomize https://github.com/kubernetes-sigs/kustomize/releases/download/v3.1.0/kustomize_3.1.0_linux_amd64
         chmod u+x ./kustomize
 
