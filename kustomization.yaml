@@ -1,8 +1,4 @@
-resources:
-- deployment.yaml
-namePrefix: bar-
-
 images:
 - name: the-my-app
-  newName: my.docker.registry.com/my-project/my-app
+  newName: us-east4-docker.pkg.dev/tonal-justice-348701/docker-repo
   newTag: test
