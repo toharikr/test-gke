@@ -13,7 +13,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
+     # - name: nginx
+     #   image: gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
         ports:
         - containerPort: 80
