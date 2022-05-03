@@ -46,6 +46,7 @@ jobs:
         location: ${{ env.GKE_ZONE }}
         credentials: ${{ secrets.GKE_SA_KEY }}
     
+    
     # Build the Docker image
     - name: Build
       run: |-
