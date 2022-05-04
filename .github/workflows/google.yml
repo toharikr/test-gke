@@ -4,11 +4,12 @@
 # documentation.
 
 name: Build and Deploy to GKE
-
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
 
 env:
   PROJECT_ID: tonal-justice-348701
