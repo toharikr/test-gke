@@ -33,16 +33,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - id: 'auth'
-      uses: 'google-github-actions/auth@v0'
-      with:
-        credentials_json: '${{ secrets.GCLOUD_KEY }}'
-        
     # Setup gcloud CLI
     - uses: google-github-actions/setup-gcloud@94337306dda8180d967a56932ceb4ddcf01edae7
       with:
-       service_account_key: ${{ secrets.GCLOUD_KEY }}
-       project_id: tonal-justice-348701
+        service_account_key: ${{ secrets.GKE_SA_KEY }}
+        project_id: ${{ env.GCLOUD_PROJECT }}
 
     # Configure Docker to use the gcloud command-line tool as a credential
     # helper for authentication
