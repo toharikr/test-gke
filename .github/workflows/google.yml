@@ -42,6 +42,8 @@ jobs:
     - run: |-
         gcloud --quiet auth configure-docker
 
+    - run: |-
+        gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://us.gcr.io
     # Get the GKE credentials so we can deploy to the cluster
     #- uses: google-github-actions/get-gke-credentials@fb08709ba27618c31c09e014e1d8364b02e5042e
     #  with:
