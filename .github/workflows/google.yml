@@ -24,6 +24,7 @@ env:
   IMAGE: static-site
   DOCKER_CONFIG: ~/.docker/config.json
   GCP_CREDENTIALS: ${{ secrets.GCLOUD_KEY }}
+  GKE_SA_KEY: ${{ secrets.GKE_SA_KEY }}
   
 
 jobs:
@@ -36,8 +37,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     
-    - name: Set SA Key
-      run: echo '${{ secrets.GKE_SA_KEY }}'
+    - name: SA Key
+      run: echo '${{ env.GKE_SA_KEY }}'
       
     - name: GCLOUD PROJECT
       run: echo '${{ env.GCLOUD_PROJECT }}'        
