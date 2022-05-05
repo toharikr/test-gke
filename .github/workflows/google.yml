@@ -19,6 +19,7 @@ env:
   GKE_ZONE: us-central1-c   # Add your cluster zone here.
   DEPLOYMENT_NAME: nginx # Add your deployment name here.
   IMAGE: static-site
+  DOCKER_CONFIG: ~/.docker/config.json
 
 jobs:
   setup-build-publish-deploy:
