@@ -52,11 +52,11 @@ jobs:
     #- run: |-
     #    gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://us.gcr.io
     # Get the GKE credentials so we can deploy to the cluster
-    #- uses: google-github-actions/get-gke-credentials@fb08709ba27618c31c09e014e1d8364b02e5042e
-    #  with:
-    #    cluster_name: ${{ env.GKE_CLUSTER }}
-    #    location: ${{ env.GKE_ZONE }}
-    #    credentials: ${{ secrets.GKE_SA_KEY }}
+    - uses: google-github-actions/get-gke-credentials@fb08709ba27618c31c09e014e1d8364b02e5042e
+      with:
+        cluster_name: ${{ env.GKE_CLUSTER }}
+        location: ${{ env.GKE_ZONE }}
+        credentials: ${{ secrets.GKE_SA_KEY }}
 
 
     # build & push
@@ -93,7 +93,7 @@ jobs:
     # Push the Docker image to Google Container Registry
     - name: Publish
       run: |-
-        sudo docker push "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
+        docker push "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
 
     # Set up kustomize
     #- name: Set up Kustomize
