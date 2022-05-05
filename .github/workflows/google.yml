@@ -10,6 +10,9 @@ on:
       username:
         required: true
         type: string
+      GCLOUD_PROJECT:
+        required: true
+        type: string
 
 env:
   PROJECT_ID: tonal-justice-348701
