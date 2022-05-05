@@ -33,10 +33,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    #- id: 'auth'
-    #  uses: 'google-github-actions/auth@v0'
-    #  with:
-    #    credentials_json: '${{ env.GCP_CREDENTIALS }}'
+    - id: 'auth'
+      uses: 'google-github-actions/auth@v0'
+      with:
+        credentials_json: '${{ env.GCP_CREDENTIALS }}'
         
     # Setup gcloud CLI
     - uses: google-github-actions/setup-gcloud@94337306dda8180d967a56932ceb4ddcf01edae7
