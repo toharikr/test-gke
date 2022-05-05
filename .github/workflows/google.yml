@@ -20,7 +20,7 @@ env:
   DEPLOYMENT_NAME: nginx # Add your deployment name here.
   IMAGE: static-site
   DOCKER_CONFIG: ~/.docker/config.json
-  GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
+  GCP_CREDENTIALS: ${{ secrets.GCLOUD_KEY }}
   
 
 jobs:
